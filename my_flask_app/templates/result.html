@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+      <tr>
+         <th> {{ 'Name' }}</th>
+         <th> {{ 'level' }}</th>
+      </tr>
+         {% for element in data %}
+            <tr>
+               <td> {{ element['username'] }} </td>
+               <td> {{ element['level'] }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
