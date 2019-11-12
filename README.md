@@ -7,7 +7,7 @@ $ source venv/bin/avtivate
 
 In repository my_project/my_flask/app
 
-$ docker build -t my-flask
+$ docker build -t my-flask .
 
 $ docker run -d -p 5000:5000 my-flask
 
