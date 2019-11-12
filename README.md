@@ -1,5 +1,6 @@
 # homework_for_python
-In repository my_project enter from console
+*In repository my_project enter from console
+
 $ virtual venv
 $ source venv/bin/avtivate
 In repository my_project/my_flask/app
