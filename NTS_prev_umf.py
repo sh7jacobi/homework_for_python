@@ -66,9 +66,10 @@ class NTS(Optimizer):
         if self.defaults['flag_c']:
             self.set_indices()
             params = self.get_params(self.param_groups)
-            self.defaults['F'] = self.defaults['function'](*params)[self.defaults['indices']].detach()
-            self.defaults['grad_F'] =self.defaults['grad_function']\
-                (*params)[self.defaults['indices']].detach()
+            with torch.no_grad():
+                self.defaults['F'] = self.defaults['function'](*params)[self.defaults['indices']]
+                self.defaults['grad_F'] =self.defaults['grad_function']\
+                    (*params)[self.defaults['indices']]
             #print(self.defaults['F'])
             #print(self.defaults['grad_F'])
 
